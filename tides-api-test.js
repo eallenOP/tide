@@ -27,6 +27,9 @@ function formatTides(tides) {
     if (tide.value < 1) {
       para.style.fontWeight = 'bold';
     }
+    if (tide.value > 2.2) {
+      para.style.color = 'firebrick';
+    }
     tideTimesContainer.appendChild(para);
     const tideDate = new Date(tide.time);
     para.append(tideDate.toLocaleString() + " ——— ");
