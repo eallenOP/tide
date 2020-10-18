@@ -10,13 +10,13 @@ fetch(endpoint + chosenLocation + auth)
   .then((data) => showData(data));
 
 function showData(tidesData) {
-  const metadataContainer = document.querySelector("#show-metadata");
+  const metadataContainer = document.querySelector("#metadata");
   console.log(tidesData);
   const lat = tidesData.metadata.latitude;
   const long = tidesData.metadata.longitude;
   const startDate = tidesData.metadata.start;
-  const space = " ";
-  metadataContainer.innerHTML = lat + space + long + space + startDate;
+  const space = " / / ";
+  metadataContainer.innerHTML = lat + space + long;
   formatTides(tidesData);
 }
 
