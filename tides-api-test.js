@@ -1,5 +1,8 @@
-const endpoint = 'https://api.niwa.co.nz/tides/data';
-const auth = '&apikey=ibC80Lmhxo5LS1Ux3G7KmdW1v42AWBKh';
+// Get env var values defined in our Netlify site UI
+const { API_TOKEN, API_URL } = process.env
+
+const endpoint = API_URL;
+const auth = API_TOKEN;
 const longBeach =  "?lat=-45.75&long=170.660";
 const spitWharf =  "?lat=-45.783&long=170.717";
 
