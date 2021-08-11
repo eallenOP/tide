@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eallenOP/tide/issues"
   },
-  "homepage": "https://github.com/eallenOP/tide#readme"
+  "homepage": "https://github.com/eallenOP/tide#readme",
+  "devDependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
