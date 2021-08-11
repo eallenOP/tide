@@ -8,8 +8,21 @@
 </head>
 <body>
     <h1>Tides</h1>
+    <button id="fetch-pokedex-btn">Fetch Pokedex</button>
+    <p id="response-output">Response Placeholder</p>
     <div id="metadata"></div>
     <div id="tide-times"></div>
+    <script>
+        const fetchPokedexBtn = document.getElementById('fetch-pokedex-btn')
+        const responseText = document.getElementById('response-output')
+        fetchPokedexBtn.addEventListener('click', async () => {
+          const response = await fetch('/.netlify/functions/pokedex').then(
+            response => response.json()
+          )
+
+          responseText.innerText = JSON.stringify(response)
+        })
+    </script>
     <script type="text/javascript" src="tides-api-test.js"></script>
 </body>
 </html>
