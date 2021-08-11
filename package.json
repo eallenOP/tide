@@ -1,3 +1,19 @@
 {
-    "lambda-build": "netlify-lambda build functions && node -p 'process.env'"
+  "name": "tide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tides-api-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eallenOP/tide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eallenOP/tide/issues"
+  },
+  "homepage": "https://github.com/eallenOP/tide#readme"
 }

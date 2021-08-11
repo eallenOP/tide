@@ -1,16 +1,23 @@
 // Get env var values defined in our Netlify site UI
-const { API_TOKEN, API_URL } = process.env
+// const { API_TOKEN, API_URL } = process.env
 
-const endpoint = API_URL;
-const auth = API_TOKEN;
-const longBeach =  "?lat=-45.75&long=170.660";
-const spitWharf =  "?lat=-45.783&long=170.717";
+// const endpoint = API_URL;
+// const auth = API_TOKEN;
+// const longBeach =  "?lat=-45.75&long=170.660";
+// const spitWharf =  "?lat=-45.783&long=170.717";
 
-let chosenLocation = longBeach;
+// let chosenLocation = longBeach;
 
-fetch(endpoint + chosenLocation + auth)
-  .then((response) => response.json())
-  .then((data) => showData(data));
+// fetch(endpoint + chosenLocation + auth)
+//   .then((response) => response.json())
+//   .then((data) => showData(data));
+
+const response = await fetch('/.netlify/lambda/get-tide').then(
+  response => response.json()
+  )
+
+  showData(JSON.stringify(response))
+
 
 function showData(tidesData) {
   const metadataContainer = document.querySelector("#metadata");
