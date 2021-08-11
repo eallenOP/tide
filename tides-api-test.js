@@ -12,7 +12,7 @@
 //   .then((response) => response.json())
 //   .then((data) => showData(data));
 
-const response = await fetch('/.netlify/lambda/get-tide').then(
+const response = fetch('/.netlify/lambda/get-tide').then(
   response => response.json()
   )
 
